@@ -52,7 +52,7 @@ This document captures and preserves the current settings, hardware configuratio
 * **Purpose**: Security, configuration profiles, and research summaries for routing iPhone traffic safely through VLESS Reality and Hysteria2.
 * **Local Path**: [iphone-vless-setup](file:///D:/AI/iphone-vless-setup)
 * **Current State & Knowledge**:
-  * Target Server: `89.40.70.42`
+  * Target Server: `78.17.185.85`
   * Active Protocols: VLESS Reality (`443/tcp`), Hysteria2 (`443/udp` - high speed on iPhone via Karing app), SOCKS5 (`50101/tcp` - fallback backup).
   * Key Findings: Yandex speedtest requires custom direct rules; Karing app does not guarantee stable split-tunneling (ru-split) via imported YAML profiles, requiring manual app-level verification rather than simple browser-based checks.
 
@@ -99,3 +99,7 @@ The latest entries in `LOG.md` (synchronized from GitHub up to 2026-08-05) show:
 * **Codex Interface**: Portable PowerShell 7.6.3 + Python 3.12.10 ready.
 * **Local LLM Engine**: WSL SGLang pipeline and Ollama installation packages verified.
 * **Unreal Engine Bridge**: Dedicated Unreal Engine 5.7.4 installation detected at `D:\UE_5.7`, utilizing PythonScriptPlugin and RemoteControl. A reverse SSH tunnel connects Hermes Gateway to the local editor.
+* **Display & Power Tuning (2026-10-22)**:
+  * **ZeroBrightnessOff Daemon**: Native C# WMI daemon installed at `C:\Users\Gray\AppData\Local\ZeroBrightnessOff\ZeroBrightnessOff.exe` (source tracked at `tools/ZeroBrightnessOff/ZeroBrightnessOff.cs`), turning off internal panel backlight (`SC_MONITORPOWER = 2`) when pressing `F5` at minimum brightness (`1% -> 0%`).
+  * **CPU Thermal Cap (i5-13420H)**: `PROCFREQMAX` (E-cores) and `PROCFREQMAX1` (P-cores) capped at `3400 MHz` (AC) / `3200 MHz` (DC) with `PERFBOOSTMODE = 3` (Efficient Enabled) across all power plans.
+  * **Telemetry Hardening**: Disabled Windows/Acer telemetry tasks & services (`AcerDIAgentSvis`, `AcerDeviceInfoAgentService`, `CompatTelRunner`, `GoogleUserPEH` no-op stubs, `SoftLanding`).
