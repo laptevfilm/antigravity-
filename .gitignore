@@ -1,0 +1,23 @@
+# Secrets and local credentials
+.env
+.env.*
+*.pem
+*.key
+*_id_ed25519
+*_id_ed25519.pub
+id_ed25519
+id_ed25519.pub
+temp_id_*
+*.p12
+*.pfx
+credentials.*
+token.*
+
+# Local runtime noise
+*.log
+*.tmp
+*.bak
+node_modules/
+.venv/
+__pycache__/
+

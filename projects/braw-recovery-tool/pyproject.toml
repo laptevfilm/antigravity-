@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "braw-recovery-tool"
+version = "0.1.0"
+description = "Forensic-safe Blackmagic RAW recovery CLI"
+requires-python = ">=3.12"
+dependencies = []
+
+[project.scripts]
+brawrec = "brawrec.cli:console_main"
+brawrec-gui = "brawrec.gui:main"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
